@@ -71,4 +71,6 @@ CREATE TABLE weapon_materials(
     id_weapons_materials INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_weapons INT,
     id_materials int
-    );
+  );
+
+INSERT INTO  `weapon_matirials` (id_weapons, id_matirials) VALUES  (1,3),(1,11) ,(2,7), (2,8),(3,10), (3,9);
