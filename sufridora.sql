@@ -1,7 +1,7 @@
-DROP TABLE IF EXISTS weapon_matirials;
+DROP TABLE IF EXISTS weapon_materials;
 DROP TABLE IF EXISTS weapons;
 DROP TABLE IF EXISTS weapon_type;
-DROP TABLE IF EXISTS matirials;
+DROP TABLE IF EXISTS materials;
 
 
 CREATE TABLE weapon_type(
@@ -24,8 +24,8 @@ CREATE TABLE weapons (
     durability INT,
     distance FLOAT,
     quality INT,
-    physic_atack FLOAT,
-    magic_atack FLOAT,
+    physic_attack FLOAT,
+    magic_attack FLOAT,
     physic_defense FLOAT,
     magic_defense FLOAT,
     description TEXT,
@@ -43,16 +43,16 @@ VALUES
 
 
 
-CREATE TABLE matirials(
-    id_matirials INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    matirials VARCHAR(16),
+CREATE TABLE materials(
+    id_materials INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    materials VARCHAR(16),
     color char (6),
     cost FLOAT
     );
 
-INSERT INTO matirials (matirials, color, cost)
-VALUES ( "obcidiana", "000000", 40),
-	   ( "obcidiana", "ddeeaa", 10),
+INSERT INTO materials (materials, color, cost)
+VALUES ( "obsidiana", "000000", 40),
+	   ( "obsidiana", "ddeeaa", 10),
        ( "carne" , "ffff00", 5),
        ( "pana", "ffdddd", 50),
        ( "hiero", "ffddff",60),
@@ -62,13 +62,13 @@ VALUES ( "obcidiana", "000000", 40),
        ("coral", "aaddee", 60),
        ( "magia oscura", "000000", 1000),
        ("huesos", "ffffff", 30),
-       ("diesnte dragon", "ffffff", 250);
+       ("diente dragon", "ffffff", 250);
 
 
 
 
-CREATE TABLE weapon_matirials(
-    id_weapons_matirials INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE weapon_materials(
+    id_weapons_materials INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_weapons INT,
-    id_matirials int
+    id_materials int
     );
